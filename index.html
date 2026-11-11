@@ -1,30 +1,2700 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f7fb"><title>NOVA BANK â€” personal banking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d1b2a">
+<title>NOVA BANK | Digital Banking</title>
+
 <style>
-:root{--bg:#f4f6fb;--surface:#fff;--ink:#182230;--muted:#778397;--line:#e9edf4;--navy:#172b4d;--blue:#3567ee;--blue2:#edf2ff;--green:#178c67;--red:#c94e5c;--shadow:0 12px 36px #1b31500b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}body.dark{--bg:#111827;--surface:#1b2535;--ink:#edf2fa;--muted:#a1aec0;--line:#303b4c;--navy:#dfe8ff;--blue:#7895ff;--blue2:#263451;--shadow:0 12px 36px #0003}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{min-height:100vh;display:grid;grid-template-columns:246px minmax(0,1fr)}aside{background:var(--surface);border-right:1px solid var(--line);padding:26px 16px;display:flex;flex-direction:column;gap:28px}.brand{display:flex;align-items:center;gap:11px;padding:0 10px;font-weight:800;font-size:18px;letter-spacing:.03em;color:var(--navy)}.brandmark{width:34px;height:34px;display:grid;place-items:center;color:white;border-radius:11px;background:linear-gradient(140deg,#7093ff,#315ee0);font-size:16px}.menu-label{padding:0 12px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:750;margin-bottom:8px}.nav{display:grid;gap:4px}.nav button{border:0;background:transparent;text-align:left;color:var(--muted);padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:12px;font-weight:600}.nav button:hover,.nav button.active{background:var(--blue2);color:var(--blue)}.nav .ico{width:19px;text-align:center;font-size:16px}.sidebottom{margin-top:auto}.securebox{margin:12px 4px 0;padding:13px;border-radius:12px;background:var(--bg);font-size:12px;color:var(--muted)}.securebox strong{display:block;color:var(--ink);margin-bottom:3px}.main{min-width:0}.topbar{height:76px;border-bottom:1px solid var(--line);background:var(--surface);display:flex;justify-content:space-between;align-items:center;padding:0 clamp(18px,4vw,54px);position:sticky;top:0;z-index:3}.crumb{font-weight:700;font-size:15px}.topright{display:flex;align-items:center;gap:14px}.iconbtn{width:38px;height:38px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:11px;position:relative}.dot{position:absolute;width:7px;height:7px;border-radius:50%;background:#f18a49;right:7px;top:7px}.avatar{width:37px;height:37px;border-radius:50%;background:#e9efff;color:#3e60bf;display:grid;place-items:center;font-weight:800}.content{max-width:1200px;padding:30px clamp(18px,4vw,54px) 54px;margin:auto}.welcome{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px;gap:16px}.welcome h1{font-size:25px;letter-spacing:-.04em;margin:0 0 5px}.welcome p{margin:0;color:var(--muted)}.badge{border-radius:20px;background:#fff4e8;color:#a7662f;padding:7px 11px;font-size:11px;font-weight:700;white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:21px;box-shadow:var(--shadow);min-width:0}.balance{grid-column:span 7;background:linear-gradient(120deg,#213a68,#3157a0);color:white;border:0;position:relative;overflow:hidden;min-height:218px}.balance:after{content:"";width:250px;height:250px;border:1px solid #ffffff17;border-radius:50%;position:absolute;right:-64px;top:-95px;box-shadow:0 0 0 30px #ffffff09,0 0 0 60px #ffffff07}.bal-head{display:flex;align-items:center;justify-content:space-between;color:#d6e0f6;font-size:12px}.eye{border:0;background:#ffffff1c;color:white;border-radius:8px;padding:5px 9px}.amount{font-size:35px;letter-spacing:-.04em;font-weight:750;margin:18px 0 2px}.accountline{font-size:12px;color:#d5def0}.bal-foot{display:flex;gap:12px;margin-top:21px;position:relative;z-index:1}.lightbtn,.primary,.secondary,.dangerbtn{border:0;border-radius:9px;padding:10px 14px;font-weight:700}.lightbtn{background:white;color:#28477e}.outlinebtn{border:1px solid #ffffff55;border-radius:9px;padding:9px 13px;color:white;background:transparent;font-weight:650}.overview{grid-column:span 5}.panelhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.panelhead h2{font-size:15px;margin:0;letter-spacing:-.01em}.subtle{color:var(--muted);font-size:12px}.mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:13px}.stat{padding:15px;border:1px solid var(--line);border-radius:12px}.stat span{color:var(--muted);font-size:12px}.stat strong{font-size:20px;display:block;margin:5px 0}.positive{color:var(--green)!important}.negative{color:var(--red)!important}.quick{grid-column:span 12;padding:16px 20px}.quickitems{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.quickitem{border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--ink);padding:12px;display:flex;align-items:center;gap:10px;font-weight:650;text-align:left}.quickitem i{font-style:normal;background:var(--blue2);color:var(--blue);border-radius:9px;padding:7px}.transactions{grid-column:span 8}.activity{grid-column:span 4}.txrow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}.txrow:last-child{border:0}.txmain{display:flex;align-items:center;gap:11px;min-width:0}.txicon{width:36px;height:36px;border-radius:11px;background:var(--bg);display:grid;place-items:center}.txmain strong,.txmain small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.txmain small{font-size:11px;color:var(--muted)}.txamt{font-weight:750;white-space:nowrap}.status{font-size:10px;font-weight:700;padding:4px 8px;border-radius:20px;background:#e9f7f1;color:#247c61}.status.pending{background:#fff4e8;color:#a7662f}.activityline{display:flex;gap:11px;padding:8px 0;color:var(--muted);font-size:12px}.activityline b{color:var(--ink)}.page{display:none}.page.active{display:block}.section-title{margin:0 0 5px;font-size:23px;letter-spacing:-.035em}.section-intro{margin:0 0 23px;color:var(--muted)}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:grid;gap:6px;margin:14px 0}.field label{font-weight:650;font-size:12px}.field input,.field select,.field textarea,.search{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 14%,transparent)}.field textarea{min-height:85px;resize:vertical}.primary{background:var(--blue);color:white}.secondary{background:var(--blue2);color:var(--blue)}.dangerbtn{background:#fff0f1;color:var(--red)}.actionrow{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.notice{padding:13px 14px;border-radius:10px;background:#fff4e8;color:#875923;font-size:12px;margin:12px 0}.dark .notice{background:#3b3025;color:#f3cc99}.soft{padding:20px;border-radius:13px;background:var(--bg)}.cardvisual{grid-column:span 6;min-height:220px;border-radius:16px;padding:24px;color:#fff;background:linear-gradient(130deg,#253957,#435f94);display:flex;flex-direction:column;justify-content:space-between}.cardnumber{font-size:22px;letter-spacing:.1em}.goal{padding:15px 0;border-bottom:1px solid var(--line)}.progress{height:7px;border-radius:8px;background:var(--line);overflow:hidden;margin:9px 0}.progress i{display:block;height:100%;background:var(--blue);border-radius:8px}.tablehead{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.search{max-width:310px}.list{display:grid;gap:0}.empty{padding:26px;text-align:center;color:var(--muted)}.mobilebar{display:none}.modalback{position:fixed;inset:0;background:#11182788;z-index:10;display:none;place-items:center;padding:16px}.modalback.open{display:grid}.modal{width:min(480px,100%);background:var(--surface);padding:24px;border-radius:17px;box-shadow:0 20px 80px #0003}.modal h2{margin:0 0 8px}.modal p{color:var(--muted)}.toast{position:fixed;right:20px;bottom:20px;background:#172b4d;color:white;padding:12px 16px;border-radius:10px;box-shadow:var(--shadow);z-index:20;transform:translateY(80px);opacity:0;transition:.25s}.toast.show{transform:translateY(0);opacity:1}.hidden{display:none!important}.fineprint{font-size:11px;color:var(--muted);margin-top:16px}
-@media(max-width:850px){.shell{grid-template-columns:76px minmax(0,1fr)}aside{padding:22px 10px;align-items:center}.brand{padding:0}.brandname,.menu-label,.nav .label,.securebox{display:none}.nav button{justify-content:center;padding:11px;width:48px}.nav .ico{font-size:18px}.nav{gap:8px}.balance,.overview{grid-column:span 12}.transactions{grid-column:span 7}.activity{grid-column:span 5}.quickitems{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.shell{display:block;padding-bottom:65px}aside{display:none}.topbar{height:62px;padding:0 16px}.content{padding:22px 14px 32px}.welcome h1{font-size:21px}.badge{white-space:normal;text-align:center}.panel{padding:16px}.balance{min-height:205px}.amount{font-size:31px}.transactions,.activity{grid-column:span 12}.quickitems{grid-template-columns:repeat(2,1fr)}.quickitem{font-size:12px;padding:9px}.twocol{grid-template-columns:1fr}.cardvisual{grid-column:span 12}.mobilebar{position:fixed;bottom:0;left:0;right:0;z-index:5;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:8px 4px calc(8px + env(safe-area-inset-bottom))}.mobilebar button{border:0;background:none;color:var(--muted);font-size:10px;display:grid;justify-items:center;gap:2px}.mobilebar button span{font-size:18px}.txrow{gap:8px}.txamt{font-size:12px}.status{font-size:9px}}
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f3f6fa;
+    color: #182b45;
+    min-height: 100vh;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.muted {
+    color: #8492a6;
+    font-size: 13px;
+}
+
+.success { color: #218c55; }
+.warning { color: #d18a19; }
+.danger { color: #c0392b; }
+
+/* =========================
+   2. AUTHENTICATION
+========================= */
+
+.auth-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0d1b2a, #244d70);
+}
+
+.auth-box {
+    background: white;
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 50px rgba(0,0,0,.18);
+}
+
+.auth-logo {
+    text-align: center;
+    color: #123b60;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #8492a6;
+    margin-bottom: 28px;
+}
+
+.auth-box h2 {
+    margin-bottom: 8px;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce3eb;
+    border-radius: 9px;
+    margin-top: 7px;
+    margin-bottom: 17px;
+}
+
+.auth-link {
+    color: #1769aa;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* =========================
+   3. BUTTONS AND INPUTS
+========================= */
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background: #1769aa;
+    color: white;
+    font-weight: 600;
+    margin: 4px 2px;
+}
+
+.btn:hover {
+    opacity: .88;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 14px;
+}
+
+.btn-dark {
+    background: #142b43;
+}
+
+.btn-green {
+    background: #218c55;
+}
+
+.btn-red {
+    background: #c0392b;
+}
+
+.btn-light {
+    background: #e9f1f8;
+    color: #1769aa;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce3eb;
+    border-radius: 8px;
+    background: white;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1769aa;
+}
+
+/* =========================
+   4. APPLICATION LAYOUT
+========================= */
+
+.app {
+    min-height: 100vh;
+}
+
+.header {
+    background: #0d1b2a;
+    color: white;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.header small {
+    display: block;
+    color: #aab8ca;
+    margin-top: 4px;
+}
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.sidebar {
+    width: 235px;
+    background: #142b43;
+    padding: 15px 10px;
+    flex-shrink: 0;
+}
+
+.sidebar button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #d5dfeb;
+    text-align: left;
+    padding: 13px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+    background: #285477;
+    color: white;
+}
+
+.main {
+    flex: 1;
+    padding: 25px;
+    min-width: 0;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.page-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 13px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.04);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.stat {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* =========================
+   5. BALANCE CARD
+========================= */
+
+.balance-card {
+    background: linear-gradient(135deg, #102b46, #285477);
+    color: white;
+    padding: 30px;
+    border-radius: 17px;
+    margin-bottom: 20px;
+}
+
+.balance-card .amount {
+    font-size: 37px;
+    font-weight: bold;
+    margin: 17px 0;
+}
+
+.balance-card p {
+    color: #d4e2ef;
+    font-size: 13px;
+}
+
+/* =========================
+   6. TRANSACTIONS
+========================= */
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th, td {
+    text-align: left;
+    padding: 13px;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 13px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* =========================
+   7. RECEIPTS
+========================= */
+
+.receipt {
+    background: white;
+    border: 1px dashed #9baabd;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 500px;
+}
+
+.receipt-header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 13px;
+}
+
+/* =========================
+   8. NOTIFICATIONS
+========================= */
+
+.notification {
+    background: #f0f5fa;
+    border-radius: 9px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   9. PROFILE
+========================= */
+
+.avatar {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background: #dce8f3;
+    color: #1769aa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================
+   10. SAVINGS PROGRESS
+========================= */
+
+.progress {
+    width: 100%;
+    height: 12px;
+    background: #e7edf4;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #218c55;
+    width: 0%;
+}
+
+/* =========================
+   11. DARK MODE
+========================= */
+
+body.dark {
+    background: #101923;
+    color: #edf3fa;
+}
+
+body.dark .card,
+body.dark .receipt {
+    background: #1b2a39;
+    color: white;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #243546;
+    color: white;
+    border-color: #40536a;
+}
+
+body.dark .notification {
+    background: #243546;
+}
+
+/* =========================
+   12. RESPONSIVE DESIGN
+========================= */
+
+@media(max-width: 800px) {
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .sidebar button {
+        min-width: 105px;
+        text-align: center;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .main {
+        padding: 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .balance-card .amount {
+        font-size: 29px;
+    }
+}
+
+@media(max-width: 420px) {
+    .auth-box {
+        padding: 23px;
+    }
+
+    .page-title {
+        font-size: 21px;
+    }
+}
+
 </style>
 </head>
+
 <body>
-<div class="shell"><aside><div class="brand"><span class="brandmark">N</span><span class="brandname">NOVA BANK</span></div><div><div class="menu-label">Workspace</div><nav class="nav" id="sideNav"></nav></div><div class="sidebottom"><div class="menu-label">Account</div><nav class="nav"><button data-page="profile"><span class="ico">â—‰</span><span class="label">My profile</span></button><button data-page="settings"><span class="ico">âš™</span><span class="label">Settings</span></button><button id="logout"><span class="ico">â†ª</span><span class="label">Sign out</span></button></nav><div class="securebox"><strong>Protected preview</strong>Balances and transactions are simulated. No real funds move.</div></div></aside>
-<main class="main"><header class="topbar"><div class="crumb" id="crumb">Overview</div><div class="topright"><button class="iconbtn" aria-label="Notifications" data-page="notifications">â™§<span class="dot"></span></button><button class="iconbtn" id="theme" aria-label="Toggle theme">â˜¾</button><div class="avatar" id="avatar">JD</div></div></header><div class="content">
-<section class="page active" id="page-home"><div class="welcome"><div><h1>Good morning, <span id="helloName">Jordan</span></h1><p>Here&apos;s your account at a glance.</p></div><span class="badge">Sandbox Â· no real funds</span></div><div class="grid"><article class="panel balance"><div class="bal-head"><span>Total balance</span><button class="eye" id="toggleBalance">Hide balance</button></div><div class="amount" id="balance">$8,420.50</div><div class="accountline" id="homeAccount">jordan.doe@gmail.com Â· Account ending 2048</div><div class="bal-foot"><button class="lightbtn" data-page="transfers">Send money</button><button class="outlinebtn" id="copyAccount">Copy account</button></div></article><article class="panel overview"><div class="panelhead"><h2>Account overview</h2><span class="subtle">This month</span></div><div class="mini-stats"><div class="stat"><span>Money in</span><strong class="positive">+$1,280.00</strong><span>â†‘ 8.2% from last month</span></div><div class="stat"><span>Money out</span><strong>âˆ’$642.80</strong><span>Across 12 transactions</span></div></div></article><article class="panel quick"><div class="panelhead"><h2>Quick actions</h2></div><div class="quickitems"><button class="quickitem" data-page="transfers"><i>â†—</i>Transfer</button><button class="quickitem" data-page="deposits"><i>ï¼‹</i>Deposit request</button><button class="quickitem" data-page="withdrawals"><i>â†™</i>Withdraw</button><button class="quickitem" data-page="savings"><i>â—·</i>Savings</button><button class="quickitem" data-page="support"><i>?</i>Get support</button></div></article><article class="panel transactions"><div class="panelhead"><h2>Recent activity</h2><button class="secondary" data-page="history">View all</button></div><div id="recentList"></div></article><article class="panel activity"><div class="panelhead"><h2>Account status</h2></div><div class="activityline"><span>â—</span><div><b>Account active</b><br>All core features are available.</div></div><div class="activityline"><span>â—ˆ</span><div><b>Identity review</b><br>Not required for this preview.</div></div><div class="activityline"><span>âŒ</span><div><b>Security</b><br>Never share passwords or one-time codes.</div></div></article></div></section>
-<section class="page" id="page-transfers"><h1 class="section-title">Transfers</h1><p class="section-intro">Send simulated funds between the sample accounts in this browser.</p><div class="twocol"><article class="panel"><div class="panelhead"><h2>New transfer</h2><span class="subtle">Instant Â· simulated</span></div><form id="transferForm"><div class="field"><label for="recipient">Recipient email or account</label><input id="recipient" list="people" placeholder="Search a NOVA account" required><datalist id="people"><option value="alex.lee@gmail.com"><option value="sam.rivera@gmail.com"></datalist></div><div id="recipientInfo" class="soft subtle">Choose a recipient to view account details.</div><div class="field"><label for="transferAmount">Amount (USD)</label><input id="transferAmount" type="number" min="0.01" step="0.01" placeholder="0.00" required></div><div class="field"><label for="description">Description</label><input id="description" maxlength="80" placeholder="What&apos;s this for?"></div><div class="field"><label for="transferPin">Transfer PIN</label><input id="transferPin" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="Use 1234" required></div><button class="primary" type="submit">Review transfer</button></form><p class="fineprint">Transfers here only change sample balances in this browser. Use PIN 1234.</p></article><article class="panel"><div class="panelhead"><h2>Transfer history</h2></div><div id="transferList" class="list"></div></article></div></section>
-<section class="page" id="page-history"><h1 class="section-title">Transaction history</h1><p class="section-intro">Search and filter simulated account activity.</p><article class="panel"><div class="tablehead"><input class="search" id="historySearch" placeholder="Search description or reference"><select id="historyFilter" class="search"><option value="all">All activity</option><option value="transfer">Transfers</option><option value="deposit">Deposit requests</option><option value="withdrawal">Withdrawal requests</option></select><button class="secondary" id="downloadStatement">Download statement</button></div><div id="historyList" class="list"></div></article></section>
-<section class="page" id="page-deposits"><h1 class="section-title">Deposit requests</h1><p class="section-intro">Submit a request for review. Requests do not add money to your balance.</p><div class="twocol"><article class="panel"><h2>Request a deposit</h2><div class="notice">Deposits are not enabled. No funds have been credited to this account.</div><form id="depositForm"><div class="field"><label for="depositAmount">Amount (USD)</label><input id="depositAmount" type="number" min="1" step="0.01" required></div><div class="field"><label for="depositMethod">Payment method</label><select id="depositMethod"><option>Bank transfer</option><option>Card</option><option>Other</option></select></div><button class="primary">Submit request</button></form><p class="fineprint">This request is recorded locally as pending. Balance is never changed. Do not upload passwords, card PINs, gift cards, or sensitive financial documents.</p></article><article class="panel"><h2>Request history</h2><div id="depositList" class="list"></div></article></div></section>
-<section class="page" id="page-withdrawals"><h1 class="section-title">Withdrawals</h1><p class="section-intro">Request review of a simulated withdrawal. No payout is made from this preview.</p><div class="twocol"><article class="panel"><h2>New withdrawal request</h2><div class="notice">Never send scratch cards, gift cards, card PINs, or one-time codes to request a payout.</div><form id="withdrawForm"><div class="field"><label for="withdrawAmount">Amount (USD)</label><input id="withdrawAmount" type="number" min="1" step="0.01" required></div><div class="field"><label for="withdrawMethod">Preferred method</label><select id="withdrawMethod"><option>Bank transfer</option><option>Contact me</option></select></div><div class="field"><label for="withdrawDetails">Contact or reference (optional)</label><input id="withdrawDetails" maxlength="100" placeholder="No sensitive account credentials"></div><button class="primary">Submit for review</button></form></article><article class="panel"><h2>Request history</h2><div id="withdrawList" class="list"></div></article></div></section>
-<section class="page" id="page-cards"><h1 class="section-title">Cards</h1><p class="section-intro">A non-functional sample card preview. It is not a payment card.</p><div class="grid"><article class="cardvisual"><div style="display:flex;justify-content:space-between"><b>NOVA BANK</b><span>VIRTUAL</span></div><div><div class="cardnumber">â€¢â€¢â€¢â€¢ &nbsp;â€¢â€¢â€¢â€¢ &nbsp;â€¢â€¢â€¢â€¢ &nbsp;2048</div><div style="display:flex;justify-content:space-between;margin-top:16px"><span id="cardName">JORDAN DOE</span><span>08/29</span></div></div></article><article class="panel" style="grid-column:span 6"><div class="panelhead"><h2>Card controls</h2><span class="status" id="cardStatus">Active</span></div><p class="subtle">This sample card cannot be used to make purchases.</p><div class="actionrow"><button class="secondary" id="freezeCard">Freeze card</button><button class="secondary" id="replaceCard">Replace sample</button></div><h3>Card activity</h3><div id="cardActivity" class="subtle">No card purchases. This sample is not connected to a payment network.</div></article></div></section>
-<section class="page" id="page-savings"><h1 class="section-title">Savings goals</h1><p class="section-intro">Track goals locally. Saving goals do not hold or move money.</p><div class="twocol"><article class="panel"><h2>Create a goal</h2><form id="goalForm"><div class="field"><label for="goalName">Goal name</label><input id="goalName" maxlength="40" placeholder="Weekend getaway" required></div><div class="field"><label for="goalTarget">Target amount</label><input id="goalTarget" type="number" min="1" step="1" required></div><button class="primary">Add goal</button></form><div class="field"><label for="calcMonthly">Monthly contribution calculator</label><input id="calcMonthly" type="number" min="1" placeholder="Monthly amount"></div><div class="subtle" id="calcResult">Enter an amount to estimate time to goal.</div></article><article class="panel"><h2>Your goals</h2><div id="goalList"></div></article></div></section>
-<section class="page" id="page-notifications"><h1 class="section-title">Notifications</h1><p class="section-intro">Updates about activity in this browser.</p><article class="panel"><div class="panelhead"><h2>Inbox</h2><div class="actionrow" style="margin:0"><button class="secondary" id="readAll">Mark all read</button><button class="secondary" id="clearNotices">Clear</button></div></div><div id="notificationList"></div></article></section>
-<section class="page" id="page-profile"><h1 class="section-title">Your profile</h1><p class="section-intro">Manage your sample account information.</p><article class="panel" style="max-width:650px"><form id="profileForm"><div class="field"><label for="fullName">Full name</label><input id="fullName" value="Jordan Doe" required></div><div class="field"><label for="email">Gmail address</label><input id="email" type="email" value="jordan.doe@gmail.com" required></div><div class="field"><label>Account number</label><input value="NOVA â€¢â€¢â€¢â€¢ 2048" disabled></div><button class="primary">Save profile</button></form><p class="fineprint">Profile changes are stored only in this browser and are not verified identity information.</p></article></section>
-<section class="page" id="page-settings"><h1 class="section-title">Settings</h1><p class="section-intro">Personalize this local preview.</p><div class="twocol"><article class="panel"><h2>Appearance</h2><p class="subtle">Choose a theme for this browser.</p><div class="actionrow"><button class="secondary" data-theme="light">Light</button><button class="secondary" data-theme="dark">Dark</button></div><div class="field"><label><input type="checkbox" id="notifyToggle" checked> Enable in-page notifications</label></div></article><article class="panel"><h2>Security & account</h2><p class="subtle">This page has no real authentication or stored financial account.</p><div class="actionrow"><button class="secondary" id="changePin">Change sample transfer PIN</button><button class="dangerbtn" id="resetData">Reset local activity</button></div><p class="fineprint">Never use a real password or PIN in this preview.</p></article></div></section>
-<section class="page" id="page-support"><h1 class="section-title">Help & support</h1><p class="section-intro">Find answers or send feedback.</p><div class="twocol"><article class="panel"><h2>Frequently asked questions</h2><details><summary>Are these real funds?</summary><p class="subtle">No. This is a local interactive preview; no real account or payment system is connected.</p></details><details><summary>Do deposits add to my balance?</summary><p class="subtle">No. Deposit requests are recorded as pending and never affect the displayed balance.</p></details><details><summary>Can I send a scratch card or gift card?</summary><p class="subtle">No. Never share gift-card codes, card PINs, passwords, or one-time codes to receive funds.</p></details><details><summary>Where is my data stored?</summary><p class="subtle">Only in this browser session. Clearing the page or resetting activity removes it.</p></details></article><article class="panel"><h2>Contact support</h2><form id="supportForm"><div class="field"><label for="topic">Topic</label><select id="topic"><option>General question</option><option>Report suspicious activity</option><option>Transaction question</option><option>Accessibility feedback</option></select></div><div class="field"><label for="supportMessage">Message</label><textarea id="supportMessage" required maxlength="500" placeholder="Do not include passwords or payment details"></textarea></div><button class="primary">Create support ticket</button></form><div id="ticketList" class="list"></div></article></div></section>
-</div></main></div><nav class="mobilebar" id="mobileNav"></nav>
-<div class="modalback" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><h2 id="modalTitle">Review transfer</h2><p id="modalText"></p><div class="actionrow"><button class="primary" id="confirmTransfer">Confirm transfer</button><button class="secondary" id="cancelModal">Cancel</button></div></div></div><div class="modalback" id="receiptModal" role="dialog" aria-modal="true" aria-labelledby="receiptTitle"><div class="modal"><h2 id="receiptTitle">Transfer receipt</h2><div id="receiptBody"></div><div class="actionrow"><button class="primary" id="downloadReceipt">Download receipt</button><button class="secondary" id="shareReceipt">Share</button><button class="secondary" id="closeReceipt">Close</button></div></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- =================================
+     SECTION 1: SIGN UP AND LOG IN
+================================= -->
+
+<div class="auth-screen" id="authScreen">
+
+    <div class="auth-box">
+
+        <div class="auth-logo">NOVA BANK</div>
+        <p class="auth-subtitle">Digital Banking</p>
+
+        <!-- SIGN IN FORM -->
+
+        <form id="loginForm">
+
+            <h2>Welcome Back</h2>
+            <p class="muted">Sign in to your NOVA account</p>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="loginEmail"
+                placeholder="Enter your Gmail address" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword"
+                placeholder="Enter your password" required>
+            </div>
+
+            <label>
+                <input type="checkbox" id="rememberMe"
+                style="width:auto">
+                Remember me
+            </label>
+
+            <button class="btn btn-block" type="submit">
+                Sign In
+            </button>
+
+            <p class="auth-link" onclick="showForgot()">
+                Forgot Password?
+            </p>
+
+            <p class="auth-link" onclick="showSignup()">
+                Don't have an account? Create Account
+            </p>
+
+        </form>
+
+        <!-- SIGN UP FORM -->
+
+        <form id="signupForm" class="hidden">
+
+            <h2>Create Your Account</h2>
+            <p class="muted">Join NOVA BANK</p>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="signupName"
+                placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gmail Address</label>
+                <input type="email" id="signupEmail"
+                placeholder="Enter your Gmail address" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="signupPassword"
+                placeholder="Create password" required minlength="8">
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword"
+                placeholder="Confirm password" required>
+            </div>
+
+            <button class="btn btn-block" type="submit">
+                Create Account
+            </button>
+
+            <p class="auth-link" onclick="showLogin()">
+                Already have an account? Log In
+            </p>
+
+        </form>
+
+        <!-- FORGOT PASSWORD -->
+
+        <form id="forgotForm" class="hidden">
+
+            <h2>Reset Password</h2>
+            <p class="muted">Enter your registered email address.</p>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="forgotEmail"
+                placeholder="Enter your email" required>
+            </div>
+
+            <button class="btn btn-block" type="submit">
+                Send Reset Request
+            </button>
+
+            <p class="auth-link" onclick="showLogin()">
+                Back to Login
+            </p>
+
+        </form>
+
+        <p id="authMessage" class="muted"></p>
+
+    </div>
+
+</div>
+
+<!-- =================================
+     MAIN APPLICATION
+================================= -->
+
+<div class="app hidden" id="application">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div>
+            <div class="logo">NOVA BANK</div>
+            <small>Digital Banking</small>
+        </div>
+
+        <div id="headerUser">Welcome</div>
+
+    </header>
+
+    <div class="layout">
+
+        <!-- =================================
+             SECTION 16: MAIN NAVIGATION
+        ================================== -->
+
+        <nav class="sidebar">
+
+            <button class="active" onclick="showPage('home',this)">
+                Home
+            </button>
+
+            <button onclick="showPage('transfers',this)">
+                Transfers
+            </button>
+
+            <button onclick="showPage('receipts',this)">
+                Receipts
+            </button>
+
+            <button onclick="showPage('deposits',this)">
+                Deposits
+            </button>
+
+            <button onclick="showPage('withdrawals',this)">
+                Withdrawals
+            </button>
+
+            <button onclick="showPage('history',this)">
+                History
+            </button>
+
+            <button onclick="showPage('cards',this)">
+                Cards
+            </button>
+
+            <button onclick="showPage('notifications',this)">
+                Notifications
+            </button>
+
+            <button onclick="showPage('profile',this)">
+                Profile
+            </button>
+
+            <button onclick="showPage('settings',this)">
+                Settings
+            </button>
+
+            <button onclick="showPage('savings',this)">
+                Savings
+            </button>
+
+            <button onclick="showPage('support',this)">
+                Support
+            </button>
+
+            <button onclick="showPage('account',this)">
+                Account Management
+            </button>
+
+            <button onclick="showPage('admin',this)">
+                Administration
+            </button>
+
+            <button onclick="logout()">
+                Log Out
+            </button>
+
+        </nav>
+
+        <!-- MAIN PAGE CONTENT -->
+
+        <main class="main">
+
+            <!-- =================================
+                 SECTION 2: DASHBOARD
+            ================================== -->
+
+            <section class="page active" id="home">
+
+                <h2 class="page-title">
+                    Welcome, <span id="welcomeName">User</span>
+                </h2>
+
+                <div class="balance-card">
+
+                    <p>AVAILABLE BALANCE</p>
+
+                    <div class="amount" id="balance">
+                        $0.00
+                    </div>
+
+                    <button class="btn btn-light"
+                    onclick="toggleBalance()">
+                        Hide / Show Balance
+                    </button>
+
+                    <p style="margin-top:20px">
+                        Account Number:
+                        <span id="accountNumber">Not available</span>
+                    </p>
+
+                    <button class="btn btn-light"
+                    onclick="copyAccount()">
+                        Copy Account Details
+                    </button>
+
+                </div>
+
+                <div class="grid">
+
+                    <div class="card">
+                        <h3>Account Overview</h3>
+                        <p>Account Name</p>
+                        <strong id="overviewName">User</strong>
+
+                        <br><br>
+
+                        <p>Account Email</p>
+                        <strong id="overviewEmail">Not available</strong>
+
+                        <br><br>
+
+                        <p>Account Status</p>
+                        <strong class="success">Active</strong>
+                    </div>
+
+                    <div class="card">
+
+                        <h3>Quick Actions</h3>
+
+                        <button class="btn"
+                        onclick="showPage('transfers')">
+                            Send Money
+                        </button>
+
+                        <button class="btn"
+                        onclick="showPage('deposits')">
+                            Deposit
+                        </button>
+
+                        <button class="btn"
+                        onclick="showPage('withdrawals')">
+                            Withdraw
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Recent Transactions</h3>
+
+                    <div id="recentTransactions">
+                        <p class="muted">No transactions available.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 3: MONEY TRANSFERS
+            ================================== -->
+
+            <section class="page" id="transfers">
+
+                <h2 class="page-title">Money Transfers</h2>
+
+                <div class="card">
+
+                    <h3>Send Money</h3>
+
+                    <div class="form-group">
+                        <label>Recipient Gmail / Account Number</label>
+                        <input type="email" id="recipientEmail"
+                        placeholder="Enter recipient Gmail">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Transfer Amount</label>
+                        <input type="number" id="transferAmount"
+                        placeholder="Enter amount" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Transfer Description</label>
+                        <textarea id="transferDescription"
+                        placeholder="What is this payment for?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Transfer PIN</label>
+                        <input type="password" id="transferPin"
+                        maxlength="6" placeholder="Enter PIN">
+                    </div>
+
+                    <button class="btn"
+                    onclick="prepareTransfer()">
+                        Continue
+                    </button>
+
+                </div>
+
+                <div class="card hidden" id="transferConfirmation">
+
+                    <h3>Confirm Transfer</h3>
+
+                    <p>Recipient: <strong id="confirmRecipient"></strong></p>
+                    <p>Amount: <strong id="confirmAmount"></strong></p>
+                    <p>Description: <strong id="confirmDescription"></strong></p>
+
+                    <button class="btn btn-green"
+                    onclick="completeTransfer()">
+                        Confirm Transfer
+                    </button>
+
+                    <button class="btn btn-red"
+                    onclick="cancelTransfer()">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 4: RECEIPTS
+            ================================== -->
+
+            <section class="page" id="receipts">
+
+                <h2 class="page-title">Transaction Receipts</h2>
+
+                <div class="card">
+
+                    <div class="receipt" id="receiptContent">
+
+                        <div class="receipt-header">
+                            <h2>NOVA BANK</h2>
+                            <p>Transaction Receipt</p>
+                        </div>
+
+                        <div id="receiptDetails">
+                            <p class="muted">
+                                Select a completed transaction to view its receipt.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button class="btn"
+                    onclick="window.print()">
+                        Download / Print Receipt
+                    </button>
+
+                    <button class="btn btn-light"
+                    onclick="shareReceipt()">
+                        Share Receipt
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 5: DEPOSITS
+            ================================== -->
+
+            <section class="page" id="deposits">
+
+                <h2 class="page-title">Deposits</h2>
+
+                <div class="card">
+
+                    <h3>Deposit Request</h3>
+
+                    <p class="danger">
+                        Deposits are not enabled. No funds have been credited to this account.
+                    </p>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label>Deposit Amount</label>
+                        <input type="number" id="depositAmount"
+                        placeholder="Enter amount">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <select id="depositMethod">
+                            <option value="">Select payment method</option>
+                            <option>Bank Transfer</option>
+                            <option>Card Payment</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Payment Proof</label>
+                        <input type="file" id="depositProof"
+                        accept="image/*,.pdf">
+                    </div>
+
+                    <button class="btn"
+                    onclick="submitDeposit()">
+                        Submit Deposit Request
+                    </button>
+
+                </div>
+
+                <div class="card">
+                    <h3>Deposit History</h3>
+                    <div id="depositHistory">
+                        <p class="muted">No deposit requests.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 6: WITHDRAWALS
+            ================================== -->
+
+            <section class="page" id="withdrawals">
+
+                <h2 class="page-title">Withdrawals</h2>
+
+                <div class="card">
+
+                    <h3>Withdrawal Request</h3>
+
+                    <div class="form-group">
+                        <label>Withdrawal Amount</label>
+                        <input type="number" id="withdrawAmount"
+                        placeholder="Enter amount">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Withdrawal Method</label>
+                        <select id="withdrawMethod">
+                            <option value="">Select method</option>
+                            <option>Bank Account</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Withdrawal Details</label>
+                        <textarea id="withdrawDetails"
+                        placeholder="Enter withdrawal details"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Supporting Photo</label>
+                        <input type="file" id="withdrawPhoto"
+                        accept="image/*">
+                    </div>
+
+                    <button class="btn"
+                    onclick="submitWithdrawal()">
+                        Submit Withdrawal Request
+                    </button>
+
+                </div>
+
+                <div class="card">
+                    <h3>Withdrawal Review</h3>
+                    <div id="withdrawStatus">
+                        <p class="muted">No withdrawal requests.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Withdrawal History</h3>
+                    <div id="withdrawHistory">
+                        <p class="muted">No withdrawal history.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 7: TRANSACTION HISTORY
+            ================================== -->
+
+            <section class="page" id="history">
+
+                <h2 class="page-title">Transaction History</h2>
+
+                <div class="card">
+
+                    <input type="search" id="historySearch"
+                    placeholder="Search transactions..."
+                    oninput="renderHistory()">
+
+                    <br><br>
+
+                    <div class="form-group">
+                        <label>Filter by date</label>
+                        <input type="date" id="historyDate"
+                        onchange="renderHistory()">
+                    </div>
+
+                    <div class="table-wrap">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="historyTable">
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <button class="btn"
+                    onclick="downloadStatement()">
+                        Download Account Statement
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 8: CARDS
+            ================================== -->
+
+            <section class="page" id="cards">
+
+                <h2 class="page-title">My Cards</h2>
+
+                <div class="card balance-card">
+
+                    <p>NOVA BANK</p>
+                    <h2 style="margin:35px 0">
+                        •••• •••• •••• 0000
+                    </h2>
+
+                    <p>CARDHOLDER</p>
+                    <strong id="cardName">ACCOUNT HOLDER</strong>
+
+                    <p style="margin-top:20px">
+                        EXPIRY: -- / --
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Card Management</h3>
+
+                    <p>Card Status: <strong id="cardStatus">Active</strong></p>
+
+                    <button class="btn"
+                    onclick="freezeCard()">
+                        Freeze Card
+                    </button>
+
+                    <button class="btn btn-green"
+                    onclick="unfreezeCard()">
+                        Unfreeze Card
+                    </button>
+
+                    <button class="btn btn-light"
+                    onclick="replaceCard()">
+                        Replace Card
+                    </button>
+
+                </div>
+
+                <div class="card">
+                    <h3>Card Transactions</h3>
+                    <p class="muted">No card transactions available.</p>
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 9: NOTIFICATIONS
+            ================================== -->
+
+            <section class="page" id="notifications">
+
+                <h2 class="page-title">Notifications</h2>
+
+                <div class="card">
+
+                    <div id="notificationList">
+                        <p class="muted">No new notifications.</p>
+                    </div>
+
+                    <button class="btn"
+                    onclick="markNotificationsRead()">
+                        Mark All as Read
+                    </button>
+
+                    <button class="btn btn-red"
+                    onclick="clearNotifications()">
+                        Clear Notifications
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 10: USER PROFILE
+            ================================== -->
+
+            <section class="page" id="profile">
+
+                <h2 class="page-title">My Profile</h2>
+
+                <div class="card">
+
+                    <div class="avatar" id="profileAvatar">
+                        N
+                    </div>
+
+                    <div class="form-group">
+                        <label>Change Profile Picture</label>
+                        <input type="file" id="profilePicture"
+                        accept="image/*" onchange="changePicture()">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="profileName">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gmail Address</label>
+                        <input type="email" id="profileEmail" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Account Number</label>
+                        <input type="text" id="profileAccount" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Registration Date</label>
+                        <input type="text" id="registrationDate" disabled>
+                    </div>
+
+                    <button class="btn"
+                    onclick="saveProfile()">
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 11: SETTINGS
+            ================================== -->
+
+            <section class="page" id="settings">
+
+                <h2 class="page-title">Settings</h2>
+
+                <div class="card">
+
+                    <h3>Security Settings</h3>
+
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password"
+                        placeholder="Enter new password">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm New Password</label>
+                        <input type="password"
+                        placeholder="Confirm password">
+                    </div>
+
+                    <button class="btn">
+                        Change Password
+                    </button>
+
+                    <hr><br>
+
+                    <h3>Transfer PIN</h3>
+
+                    <input type="password" maxlength="6"
+                    placeholder="Change transfer PIN">
+
+                    <br>
+
+                    <button class="btn">
+                        Update PIN
+                    </button>
+
+                    <hr><br>
+
+                    <h3>Privacy and Authentication</h3>
+
+                    <p>Face ID authentication</p>
+                    <input type="checkbox" style="width:auto">
+
+                    <p>Fingerprint authentication</p>
+                    <input type="checkbox" style="width:auto">
+
+                    <p>Two-factor authentication</p>
+                    <input type="checkbox" style="width:auto">
+
+                    <p>Login alerts</p>
+                    <input type="checkbox" style="width:auto">
+
+                    <hr><br>
+
+                    <h3>Appearance</h3>
+
+                    <button class="btn"
+                    onclick="setTheme('dark')">
+                        Dark Mode
+                    </button>
+
+                    <button class="btn btn-light"
+                    onclick="setTheme('light')">
+                        Light Mode
+                    </button>
+
+                    <hr><br>
+
+                    <h3>Language</h3>
+
+                    <select>
+                        <option>English</option>
+                    </select>
+
+                    <hr><br>
+
+                    <h3>Account Security</h3>
+                    <p>Login History</p>
+                    <p>Active Devices</p>
+                    <p>Privacy Settings</p>
+
+                    <button class="btn btn-red"
+                    onclick="logout()">
+                        Log Out
+                    </button>
+
+                    <button class="btn btn-red"
+                    onclick="deleteAccount()">
+                        Delete Account
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 12: SAVINGS
+            ================================== -->
+
+            <section class="page" id="savings">
+
+                <h2 class="page-title">Savings</h2>
+
+                <div class="card">
+
+                    <h3>Savings Overview</h3>
+
+                    <p>Total Savings</p>
+                    <div class="stat" id="savingsBalance">$0.00</div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Create Savings Goal</h3>
+
+                    <div class="form-group">
+                        <label>Goal Name</label>
+                        <input type="text" id="goalName"
+                        placeholder="Example: New Car">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Target Amount</label>
+                        <input type="number" id="goalAmount"
+                        placeholder="Enter target">
+                    </div>
+
+                    <button class="btn" onclick="createGoal()">
+                        Create Goal
+                    </button>
+
+                </div>
+
+                <div class="card">
+                    <h3>Your Savings Goals</h3>
+                    <div id="savingsGoals">
+                        <p class="muted">No savings goals created.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Savings Calculator</h3>
+
+                    <input type="number" id="monthlySaving"
+                    placeholder="Monthly savings">
+
+                    <input type="number" id="savingMonths"
+                    placeholder="Number of months">
+
+                    <button class="btn" onclick="calculateSavings()">
+                        Calculate
+                    </button>
+
+                    <p id="savingResult"></p>
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 13: CUSTOMER SUPPORT
+            ================================== -->
+
+            <section class="page" id="support">
+
+                <h2 class="page-title">Customer Support</h2>
+
+                <div class="card">
+
+                    <h3>Help Center</h3>
+
+                    <details>
+                        <summary>How do I create an account?</summary>
+                        <p>Use the account registration page.</p>
+                    </details>
+
+                    <br>
+
+                    <details>
+                        <summary>How do I send money?</summary>
+                        <p>Open Transfers and enter the recipient details.</p>
+                    </details>
+
+                    <br>
+
+                    <details>
+                        <summary>How do deposits work?</summary>
+                        <p>Deposits are currently unavailable.</p>
+                    </details>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Contact Support</h3>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="supportSubject"
+                        placeholder="Enter subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="supportMessage"
+                        placeholder="Describe your problem"></textarea>
+                    </div>
+
+                    <button class="btn" onclick="submitSupport()">
+                        Submit Complaint
+                    </button>
+
+                </div>
+
+                <div class="card">
+                    <h3>Support Ticket History</h3>
+                    <div id="supportHistory">
+                        <p class="muted">No support tickets.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 14: ACCOUNT MANAGEMENT
+            ================================== -->
+
+            <section class="page" id="account">
+
+                <h2 class="page-title">Account Management</h2>
+
+                <div class="card">
+
+                    <h3>Account Information</h3>
+
+                    <p>Account Status: Active</p>
+                    <p>Account Verification: Not verified</p>
+                    <p>Account Activity: Available</p>
+                    <p>Account Restrictions: None displayed</p>
+
+                    <br>
+
+                    <h3>Account Services</h3>
+
+                    <button class="btn"
+                    onclick="downloadStatement()">
+                        Account Statement
+                    </button>
+
+                    <button class="btn btn-light"
+                    onclick="showPage('settings')">
+                        Manage Connected Devices
+                    </button>
+
+                    <button class="btn btn-red"
+                    onclick="requestClosure()">
+                        Request Account Closure
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 15: ADMINISTRATION
+            ================================== -->
+
+            <section class="page" id="admin">
+
+                <h2 class="page-title">Administration</h2>
+
+                <div class="card">
+
+                    <h3>Administrator Access</h3>
+
+                    <div class="form-group">
+                        <label>Admin Email</label>
+                        <input type="email" id="adminEmail"
+                        placeholder="Administrator email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Admin Password</label>
+                        <input type="password" id="adminPassword"
+                        placeholder="Administrator password">
+                    </div>
+
+                    <button class="btn" onclick="adminLogin()">
+                        Admin Sign In
+                    </button>
+
+                    <p id="adminMessage" class="muted"></p>
+
+                </div>
+
+                <div id="adminPanel" class="hidden">
+
+                    <div class="card">
+                        <h3>Registered Users</h3>
+                        <div id="adminUsers"></div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Transaction Monitoring</h3>
+                        <div id="adminTransactions"></div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Deposit Requests</h3>
+                        <div id="adminDeposits"></div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Withdrawal Requests</h3>
+                        <div id="adminWithdrawals"></div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Administrator Notifications</h3>
+
+                        <textarea id="adminNotice"
+                        placeholder="Write a notification"></textarea>
+
+                        <button class="btn"
+                        onclick="sendAdminNotification()">
+                            Send Notification
+                        </button>
+
+                    </div>
+
+                    <div class="card">
+                        <h3>Audit Log</h3>
+                        <div id="auditLog"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 17: DATABASE AND TECHNICAL
+            ================================== -->
+
+            <section class="page" id="technical">
+
+                <h2 class="page-title">System Information</h2>
+
+                <div class="card">
+
+                    <h3>Database Configuration</h3>
+
+                    <p>Authentication service</p>
+                    <p>User database</p>
+                    <p>Account database</p>
+                    <p>Transaction database</p>
+                    <p>Receipt database</p>
+                    <p>Deposit request database</p>
+                    <p>Withdrawal request database</p>
+                    <p>Notification database</p>
+                    <p>Secure file storage</p>
+                    <p>Row Level Security</p>
+                    <p>Real-time updates</p>
+                    <p>Transaction audit logs</p>
+                    <p>Backup and recovery</p>
+
+                    <br>
+
+                    <p class="muted">
+                        Database services require a configured Supabase project,
+                        protected server functions and database security policies.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 18: DESIGN AND USER EXPERIENCE
+            ================================== -->
+
+            <section class="page" id="design">
+
+                <h2 class="page-title">Appearance and Experience</h2>
+
+                <div class="card">
+
+                    <h3>Interface Preferences</h3>
+
+                    <p>Professional NOVA BANK branding</p>
+                    <p>Responsive mobile layout</p>
+                    <p>Consistent buttons and icons</p>
+                    <p>Loading and confirmation messages</p>
+                    <p>Dark theme</p>
+                    <p>Light theme</p>
+                    <p>Accessible forms</p>
+
+                    <br>
+
+                    <button class="btn" onclick="setTheme('dark')">
+                        Dark Appearance
+                    </button>
+
+                    <button class="btn btn-light"
+                    onclick="setTheme('light')">
+                        Light Appearance
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 19: FINAL TESTING
+            ================================== -->
+
+            <section class="page" id="testing">
+
+                <h2 class="page-title">System Testing</h2>
+
+                <div class="card">
+
+                    <h3>Testing Checklist</h3>
+
+                    <div id="testChecklist">
+
+                        <label><input type="checkbox"> Account registration</label><br>
+                        <label><input type="checkbox"> Login and logout</label><br>
+                        <label><input type="checkbox"> Password reset</label><br>
+                        <label><input type="checkbox"> Transfer processing</label><br>
+                        <label><input type="checkbox"> Sender receipts</label><br>
+                        <label><input type="checkbox"> Receiver receipts</label><br>
+                        <label><input type="checkbox"> Matching references</label><br>
+                        <label><input type="checkbox"> Receiver notifications</label><br>
+                        <label><input type="checkbox"> Deposit restrictions</label><br>
+                        <label><input type="checkbox"> Withdrawal requests</label><br>
+                        <label><input type="checkbox"> Transaction history</label><br>
+                        <label><input type="checkbox"> Administrator security</label><br>
+                        <label><input type="checkbox"> Database security</label><br>
+                        <label><input type="checkbox"> Mobile responsiveness</label><br>
+                        <label><input type="checkbox"> Error handling</label><br>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =================================
+                 SECTION 20: PROJECT COMPLETION
+            ================================== -->
+
+            <section class="page" id="completion">
+
+                <h2 class="page-title">Project Completion</h2>
+
+                <div class="card">
+
+                    <h3>Project Requirements</h3>
+
+                    <label><input type="checkbox"> All features implemented</label><br>
+                    <label><input type="checkbox"> All pages connected</label><br>
+                    <label><input type="checkbox"> Database configured</label><br>
+                    <label><input type="checkbox"> Authentication secured</label><br>
+                    <label><input type="checkbox"> Transfers tested</label><br>
+                    <label><input type="checkbox"> Receipts working</label><br>
+                    <label><input type="checkbox"> Deposit restrictions tested</label><br>
+                    <label><input type="checkbox"> Withdrawal requests working</label><br>
+                    <label><input type="checkbox"> Administration secured</label><br>
+                    <label><input type="checkbox"> Security rules tested</label><br>
+                    <label><input type="checkbox"> Final design completed</label><br>
+
+                    <br>
+
+                    <h3>NOVA BANK</h3>
+                    <p>Project completion checklist.</p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<!-- =================================
+     JAVASCRIPT
+================================= -->
+
 <script>
-(()=>{'use strict';const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];const navItems=[['home','âŒ‚','Overview'],['transfers','â†—','Transfers'],['cards','â–¤','Cards'],['history','â—·','History'],['deposits','ï¼‹','Deposits'],['withdrawals','â†™','Withdrawals'],['savings','â—‰','Savings'],['notifications','â™§','Notifications'],['support','?','Support']];const state={balance:8420.50,me:{name:'Jordan Doe',email:'jordan.doe@gmail.com'},people:{'alex.lee@gmail.com':{name:'Alex Lee',balance:1250.00,account:'NOVA â€¢â€¢â€¢â€¢ 7851'},'sam.rivera@gmail.com':{name:'Sam Rivera',balance:2380.75,account:'NOVA â€¢â€¢â€¢â€¢ 3910'}},transactions:[{type:'transfer',title:'Coffee House',detail:'Card purchase Â· Jun 12',amount:-6.50,status:'Completed',ref:'NV-8K31P'},{type:'transfer',title:'Salary deposit',detail:'From Acme Studio Â· Jun 10',amount:2450,status:'Completed',ref:'NV-1A92Q'},{type:'transfer',title:'Grocery Market',detail:'Card purchase Â· Jun 08',amount:-84.25,status:'Completed',ref:'NV-7B11C'}],deposits:[],withdrawals:[],notifications:[{text:'Welcome to NOVA BANK. This account is a local preview.',read:false}],goals:[{name:'Emergency fund',target:5000,saved:1850}],tickets:[],balanceHidden:false,pin:'1234',frozen:false,theme:'light',receipt:null};const navMarkup=items=>items.map(([id,icon,label])=>`<button data-page="${id}" class="${id==='home'?'active':''}"><span class="ico">${icon}</span><span class="label">${label}</span></button>`).join('');$('#sideNav').innerHTML=navMarkup(navItems);$('#mobileNav').innerHTML=navMarkup(navItems.slice(0,5));function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2700)}function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n)}function go(id){$$('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));$$('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));$('#crumb').textContent=(navItems.find(x=>x[0]===id)||[id,'',id[0].toUpperCase()+id.slice(1)])[2];window.scrollTo({top:0,behavior:'smooth'});render()}document.addEventListener('click',e=>{const b=e.target.closest('[data-page]');if(b){e.preventDefault();go(b.dataset.page)}});function render(){const display=state.balanceHidden?'â€¢â€¢â€¢â€¢â€¢â€¢':money(state.balance);$('#balance').textContent=display;$('#toggleBalance').textContent=state.balanceHidden?'Show balance':'Hide balance';$('#homeAccount').textContent=`${state.me.email} Â· Account ending 2048`;$('#helloName').textContent=state.me.name.split(' ')[0];$('#avatar').textContent=state.me.name.split(' ').map(x=>x[0]).join('').slice(0,2).toUpperCase();$('#cardName').textContent=state.me.name.toUpperCase();const rows=state.transactions.slice().reverse().map(tx=>`<div class="txrow"><div class="txmain"><span class="txicon">${tx.type==='transfer'?'â†—':tx.type==='deposit'?'ï¼‹':'â†™'}</span><div><strong>${safe(tx.title)}</strong><small>${safe(tx.detail)} Â· ${safe(tx.ref)}</small></div></div><span class="txamt ${tx.amount>0?'positive':''}">${tx.amount>0?'+':''}${money(tx.amount)}</span><span class="status ${tx.status==='Pending'?'pending':''}">${safe(tx.status)}</span></div>`).join('')||'<div class="empty">No activity yet.</div>';$('#recentList').innerHTML=rows;$('#historyList').innerHTML=rows;$('#transferList').innerHTML=rows;$('#depositList').innerHTML=state.deposits.map(x=>requestRow(x,'Deposit')).join('')||'<div class="empty">No deposit requests yet.</div>';$('#withdrawList').innerHTML=state.withdrawals.map(x=>requestRow(x,'Withdrawal')).join('')||'<div class="empty">No withdrawal requests yet.</div>';$('#goalList').innerHTML=state.goals.map(g=>`<div class="goal"><b>${safe(g.name)}</b><div class="subtle">${money(g.saved)} saved of ${money(g.target)}</div><div class="progress"><i style="width:${Math.min(100,g.saved/g.target*100)}%"></i></div><button class="secondary addSavings" data-name="${safe(g.name)}">Add progress</button></div>`).join('')||'<div class="empty">Create your first goal.</div>';$('#notificationList').innerHTML=state.notifications.map((n,i)=>`<div class="txrow"><div class="txmain"><span class="txicon">â™§</span><div><strong>${safe(n.text)}</strong><small>${n.read?'Read':'New'}</small></div></div><button class="secondary markRead" data-index="${i}">${n.read?'Read':'Mark read'}</button></div>`).join('')||'<div class="empty">You&apos;re all caught up.</div>';$('#ticketList').innerHTML=state.tickets.map(t=>`<div class="txrow"><div><b>${safe(t.topic)}</b><div class="subtle">${safe(t.message)}</div></div><span class="status pending">Received</span></div>`).join('');$('#cardStatus').textContent=state.frozen?'Frozen':'Active';$('#freezeCard').textContent=state.frozen?'Unfreeze card':'Freeze card';$('#cardActivity').textContent=state.frozen?'Card is frozen. No purchase activity is connected.':'No card purchases. This sample is not connected to a payment network.'}
-function requestRow(x,label){return `<div class="txrow"><div class="txmain"><span class="txicon">${label==='Deposit'?'ï¼‹':'â†™'}</span><div><strong>${label} request Â· ${money(x.amount)}</strong><small>${safe(x.method)} Â· ${safe(x.ref)} Â· ${safe(x.date)}</small></div></div><span class="status pending">${safe(x.status)}</span></div>`}function addNotice(text){if($('#notifyToggle')?.checked!==false)state.notifications.unshift({text,read:false})}function ref(){return 'NV-'+Math.random().toString(36).slice(2,7).toUpperCase()}$('#toggleBalance').onclick=()=>{state.balanceHidden=!state.balanceHidden;render()};$('#copyAccount').onclick=async()=>{try{await navigator.clipboard.writeText(`${state.me.name} Â· ${state.me.email} Â· NOVA â€¢â€¢â€¢â€¢ 2048`);toast('Account details copied')}catch{toast(`${state.me.name} Â· ${state.me.email}`)}};$('#recipient').addEventListener('input',()=>{const p=state.people[$('#recipient').value.toLowerCase().trim()];$('#recipientInfo').innerHTML=p?`<b>${safe(p.name)}</b><br>${safe($('#recipient').value)} Â· ${safe(p.account)}`:'No matching sample account. Try alex.lee@gmail.com or sam.rivera@gmail.com.'});let pendingTransfer=null;$('#transferForm').onsubmit=e=>{e.preventDefault();const email=$('#recipient').value.toLowerCase().trim(),p=state.people[email],amount=Number($('#transferAmount').value);if(!p)return toast('Choose a listed sample recipient');if(!Number.isFinite(amount)||amount<=0)return toast('Enter a valid amount');if(amount>state.balance)return toast('Insufficient sample balance');if($('#transferPin').value!==state.pin)return toast('Incorrect transfer PIN');pendingTransfer={email,p,amount,description:$('#description').value.trim()||'Personal transfer'};$('#modalText').textContent=`Send ${money(amount)} to ${p.name} (${email})? This only updates sample balances in this browser.`;$('#confirmModal').classList.add('open')};$('#cancelModal').onclick=()=>$('#confirmModal').classList.remove('open');$('#confirmTransfer').onclick=()=>{if(!pendingTransfer)return;const {email,p,amount,description}=pendingTransfer;if(amount>state.balance){toast('Insufficient sample balance');return}state.balance=+(state.balance-amount).toFixed(2);p.balance=+(p.balance+amount).toFixed(2);const id=ref(),date=new Date().toLocaleString();const tx={type:'transfer',title:`Transfer to ${p.name}`,detail:description,amount:-amount,status:'Completed',ref:id,date,transactionId:id,from:state.me.name,fromEmail:state.me.email,to:p.name,toEmail:email};state.transactions.push(tx);addNotice(`Transfer sent: ${money(amount)} to ${p.name}. Ref ${id}`);state.notifications.unshift({text:`${money(amount)} received from ${state.me.name}. Ref ${id}`,read:false,recipient:email});state.receipt=tx;$('#confirmModal').classList.remove('open');$('#transferForm').reset();$('#recipientInfo').textContent='Choose a recipient to view account details.';pendingTransfer=null;render();showReceipt(tx);toast('Transfer completed in this browser')};function showReceipt(tx){$('#receiptBody').innerHTML=`<div class="soft"><p><b>Status</b> Â· Completed (simulated)</p><p><b>Sender</b> Â· ${safe(tx.from)}<br>${safe(tx.fromEmail)}</p><p><b>Recipient</b> Â· ${safe(tx.to)}<br>${safe(tx.toEmail)}</p><p><b>Amount</b> Â· ${money(Math.abs(tx.amount))}</p><p><b>Transaction ID / reference</b> Â· ${safe(tx.transactionId)}</p><p><b>Date</b> Â· ${safe(tx.date||new Date().toLocaleString())}</p><p><b>Description</b> Â· ${safe(tx.detail)}</p></div>`;$('#receiptModal').classList.add('open')}$('#closeReceipt').onclick=()=>$('#receiptModal').classList.remove('open');$('#downloadReceipt').onclick=()=>{if(state.receipt)download('nova-receipt.txt',`NOVA BANK Â· simulated receipt\nStatus: Completed (simulated)\nSender: ${state.receipt.from} (${state.receipt.fromEmail})\nRecipient: ${state.receipt.to} (${state.receipt.toEmail})\nAmount: ${money(Math.abs(state.receipt.amount))}\nReference: ${state.receipt.transactionId}\nDate: ${state.receipt.date}`)};$('#shareReceipt').onclick=async()=>{if(!state.receipt)return;const text=`NOVA BANK simulated receipt â€” ${money(Math.abs(state.receipt.amount))} Â· Reference ${state.receipt.transactionId}`;if(navigator.share){try{await navigator.share({text})}catch{}}else{try{await navigator.clipboard.writeText(text);toast('Receipt summary copied')}catch{toast(text)}}};function addRequest(type,amount,method){const x={amount,method,status:'Pending review',ref:ref(),date:new Date().toLocaleDateString()};state[type].unshift(x);state.transactions.push({type,title:`${type==='deposits'?'Deposit':'Withdrawal'} request`,detail:`${method} Â· no balance change`,amount:0,status:'Pending',ref:x.ref});addNotice(`${type==='deposits'?'Deposit':'Withdrawal'} request ${x.ref} is pending review. No funds moved.`);render()};$('#depositForm').onsubmit=e=>{e.preventDefault();addRequest('deposits',Number($('#depositAmount').value),$('#depositMethod').value);e.target.reset();toast('Request recorded. Balance unchanged.')};$('#withdrawForm').onsubmit=e=>{e.preventDefault();addRequest('withdrawals',Number($('#withdrawAmount').value),$('#withdrawMethod').value);e.target.reset();toast('Request recorded. No payout was made.')};$('#historySearch').oninput=filterHistory;$('#historyFilter').onchange=filterHistory;function filterHistory(){const q=$('#historySearch').value.toLowerCase(),f=$('#historyFilter').value;const items=state.transactions.filter(t=>(f==='all'||t.type===f)&&`${t.title} ${t.detail} ${t.ref}`.toLowerCase().includes(q));$('#historyList').innerHTML=items.map(tx=>`<div class="txrow"><div class="txmain"><span class="txicon">â—·</span><div><strong>${safe(tx.title)}</strong><small>${safe(tx.detail)} Â· ${safe(tx.ref)}</small></div></div><span class="txamt ${tx.amount>0?'positive':''}">${tx.amount?`${tx.amount>0?'+':''}${money(tx.amount)}`:'â€”'}</span><span class="status ${tx.status==='Pending'?'pending':''}">${safe(tx.status)}</span></div>`).join('')||'<div class="empty">No matching transactions.</div>'}function download(name,text){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}$('#downloadStatement').onclick=()=>download('nova-account-statement.csv','Type,Description,Amount,Status,Reference\n'+state.transactions.map(t=>[t.type,`"${t.title.replaceAll('"','""')}"`,t.amount,t.status,t.ref].join(',')).join('\n'));$('#freezeCard').onclick=()=>{state.frozen=!state.frozen;render();toast(state.frozen?'Sample card frozen':'Sample card active')};$('#replaceCard').onclick=()=>toast('Sample card details refreshed');$('#goalForm').onsubmit=e=>{e.preventDefault();state.goals.push({name:$('#goalName').value.trim(),target:Number($('#goalTarget').value),saved:0});e.target.reset();render();toast('Savings goal added')};$('#goalList').onclick=e=>{const b=e.target.closest('.addSavings');if(!b)return;const g=state.goals.find(x=>x.name===b.dataset.name);if(g){const amount=Number(prompt('Amount to add to your progress (tracking only):','50'));if(Number.isFinite(amount)&&amount>0){g.saved=Math.min(g.target,g.saved+amount);render()}}};$('#calcMonthly').oninput=()=>{const v=Number($('#calcMonthly').value);$('#calcResult').textContent=v>0?`At ${money(v)} per month, your $5,000 target takes about ${Math.ceil(5000/v)} months (estimate only).`:'Enter an amount to estimate time to goal.'};$('#profileForm').onsubmit=e=>{e.preventDefault();state.me.name=$('#fullName').value.trim();state.me.email=$('#email').value.trim();render();toast('Profile updated in this browser')};$('#readAll').onclick=()=>{state.notifications.forEach(n=>n.read=true);render()};$('#clearNotices').onclick=()=>{state.notifications=[];render()};$('#notificationList').onclick=e=>{const b=e.target.closest('.markRead');if(b){state.notifications[Number(b.dataset.index)].read=true;render()}};$('#supportForm').onsubmit=e=>{e.preventDefault();state.tickets.unshift({topic:$('#topic').value,message:$('#supportMessage').value.trim()});e.target.reset();render();toast('Support ticket saved in this browser')};$('#theme').onclick=()=>setTheme(state.theme==='dark'?'light':'dark');$$('[data-theme]').forEach(b=>b.onclick=()=>setTheme(b.dataset.theme));function setTheme(t){state.theme=t;document.body.classList.toggle('dark',t==='dark');$('#theme').textContent=t==='dark'?'â˜€':'â˜¾'}$('#changePin').onclick=()=>{const p=prompt('Set a new 4-digit sample transfer PIN');if(p&&/^\d{4}$/.test(p)){state.pin=p;toast('Sample PIN changed')}else if(p)toast('PIN must be exactly 4 digits')};$('#resetData').onclick=()=>{if(confirm('Reset local activity and restore the starting account?'))location.reload()};$('#logout').onclick=()=>{toast('Signed out of this local preview');go('home')};$('#logout').setAttribute('aria-label','Sign out');render();})();
+
+/* =========================
+   1. APPLICATION DATA
+========================= */
+
+let currentUser = null;
+let accountBalance = 0;
+let balanceHidden = false;
+let cardFrozen = false;
+let pendingTransfer = null;
+
+let transactions = [];
+let deposits = [];
+let withdrawals = [];
+let notifications = [];
+let savingsGoals = [];
+let supportTickets = [];
+let auditLogs = [];
+
+let registeredUsers = [];
+
+/* =========================
+   2. AUTHENTICATION
+========================= */
+
+function showLogin() {
+    document.getElementById("loginForm").classList.remove("hidden");
+    document.getElementById("signupForm").classList.add("hidden");
+    document.getElementById("forgotForm").classList.add("hidden");
+    document.getElementById("authMessage").textContent = "";
+}
+
+function showSignup() {
+    document.getElementById("loginForm").classList.add("hidden");
+    document.getElementById("signupForm").classList.remove("hidden");
+    document.getElementById("forgotForm").classList.add("hidden");
+    document.getElementById("authMessage").textContent = "";
+}
+
+function showForgot() {
+    document.getElementById("loginForm").classList.add("hidden");
+    document.getElementById("signupForm").classList.add("hidden");
+    document.getElementById("forgotForm").classList.remove("hidden");
+}
+
+document.getElementById("signupForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("signupName").value.trim();
+    const email = document.getElementById("signupEmail").value.trim().toLowerCase();
+    const password = document.getElementById("signupPassword").value;
+    const confirm = document.getElementById("confirmPassword").value;
+
+    if (password !== confirm) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    if (registeredUsers.some(user => user.email === email)) {
+        alert("This email is already registered.");
+        return;
+    }
+
+    const user = {
+        name: name,
+        email: email,
+        accountNumber: email,
+        balance: 0,
+        date: new Date().toLocaleDateString(),
+        profilePicture: ""
+    };
+
+    registeredUsers.push(user);
+
+    auditLogs.push("New account registration: " + email);
+
+    currentUser = user;
+
+    openApplication();
+
+});
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+
+    const user = registeredUsers.find(user => user.email === email);
+
+    if (!user) {
+        alert("Account not found. Please create an account first.");
+        return;
+    }
+
+    currentUser = user;
+
+    openApplication();
+
+});
+
+document.getElementById("forgotForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    alert("Password reset requires an authenticated email service.");
+
+});
+
+function openApplication() {
+
+    document.getElementById("authScreen").classList.add("hidden");
+    document.getElementById("application").classList.remove("hidden");
+
+    updateDashboard();
+
+    showPage("home");
+
+}
+
+function logout() {
+
+    currentUser = null;
+
+    document.getElementById("application").classList.add("hidden");
+    document.getElementById("authScreen").classList.remove("hidden");
+
+    showLogin();
+
+}
+
+/* =========================
+   3. NAVIGATION
+========================= */
+
+function showPage(pageId, button) {
+
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    const selectedPage = document.getElementById(pageId);
+
+    if (!selectedPage) return;
+
+    selectedPage.classList.add("active");
+
+    document.querySelectorAll(".sidebar button").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    if (button) {
+        button.classList.add("active");
+    }
+
+    if (pageId === "history") renderHistory();
+    if (pageId === "notifications") renderNotifications();
+    if (pageId === "receipts") renderLatestReceipt();
+
+}
+
+/* =========================
+   4. DASHBOARD
+========================= */
+
+function updateDashboard() {
+
+    if (!currentUser) return;
+
+    document.getElementById("welcomeName").textContent = currentUser.name;
+    document.getElementById("headerUser").textContent = currentUser.name;
+    document.getElementById("overviewName").textContent = currentUser.name;
+    document.getElementById("overviewEmail").textContent = currentUser.email;
+    document.getElementById("accountNumber").textContent = currentUser.email;
+    document.getElementById("cardName").textContent = currentUser.name.toUpperCase();
+
+    document.getElementById("profileName").value = currentUser.name;
+    document.getElementById("profileEmail").value = currentUser.email;
+    document.getElementById("profileAccount").value = currentUser.email;
+    document.getElementById("registrationDate").value = currentUser.date;
+
+    accountBalance = currentUser.balance;
+
+    updateBalance();
+    renderRecentTransactions();
+
+}
+
+function updateBalance() {
+
+    const display = balanceHidden
+        ? "••••••"
+        : "$" + accountBalance.toFixed(2);
+
+    document.getElementById("balance").textContent = display;
+
+}
+
+function toggleBalance() {
+
+    balanceHidden = !balanceHidden;
+
+    updateBalance();
+
+}
+
+function copyAccount() {
+
+    if (!currentUser) return;
+
+    navigator.clipboard.writeText(currentUser.email)
+        .then(() => alert("Account details copied."))
+        .catch(() => alert("Unable to copy account details."));
+
+}
+
+/* =========================
+   5. TRANSFERS
+========================= */
+
+function prepareTransfer() {
+
+    const recipient = document.getElementById("recipientEmail").value.trim().toLowerCase();
+
+    const amount = Number(document.getElementById("transferAmount").value);
+
+    const description = document.getElementById("transferDescription").value;
+
+    const pin = document.getElementById("transferPin").value;
+
+    if (!recipient || !amount || amount <= 0 || !pin) {
+        alert("Please complete all transfer fields.");
+        return;
+    }
+
+    if (recipient === currentUser.email) {
+        alert("You cannot send money to your own account.");
+        return;
+    }
+
+    if (amount > accountBalance) {
+        alert("Insufficient available balance.");
+        return;
+    }
+
+    pendingTransfer = {
+        recipient,
+        amount,
+        description
+    };
+
+    document.getElementById("confirmRecipient").textContent = recipient;
+    document.getElementById("confirmAmount").textContent = "$" + amount.toFixed(2);
+    document.getElementById("confirmDescription").textContent = description || "No description";
+
+    document.getElementById("transferConfirmation").classList.remove("hidden");
+
+}
+
+function completeTransfer() {
+
+    if (!pendingTransfer) return;
+
+    const receiver = registeredUsers.find(
+        user => user.email === pendingTransfer.recipient
+    );
+
+    if (!receiver) {
+        alert("Recipient account could not be found.");
+        return;
+    }
+
+    if (accountBalance < pendingTransfer.amount) {
+        alert("Insufficient balance.");
+        return;
+    }
+
+    const transactionId = "NOVA-" + Date.now();
+
+    const reference = "REF-" + Math.random().toString(36).substring(2, 12).toUpperCase();
+
+    const transaction = {
+        id: transactionId,
+        reference: reference,
+        sender: currentUser.email,
+        receiver: receiver.email,
+        senderName: currentUser.name,
+        receiverName: receiver.name,
+        amount: pendingTransfer.amount,
+        description: pendingTransfer.description,
+        date: new Date().toLocaleString(),
+        status: "Successful",
+        type: "Transfer"
+    };
+
+    accountBalance -= pendingTransfer.amount;
+    currentUser.balance = accountBalance;
+
+    receiver.balance += pendingTransfer.amount;
+
+    transactions.push(transaction);
+
+    notifications.push({
+        message: "You received a transfer from " + currentUser.name,
+        read: false,
+        recipient: receiver.email
+    });
+
+    notifications.push({
+        message: "Your transfer was completed successfully.",
+        read: false,
+        recipient: currentUser.email
+    });
+
+    auditLogs.push("Transfer reference: " + reference);
+
+    pendingTransfer = null;
+
+    document.getElementById("transferConfirmation").classList.add("hidden");
+
+    document.getElementById("transferAmount").value = "";
+    document.getElementById("recipientEmail").value = "";
+    document.getElementById("transferDescription").value = "";
+    document.getElementById("transferPin").value = "";
+
+    updateDashboard();
+    renderHistory();
+
+    alert("Transfer completed successfully.");
+
+}
+
+function cancelTransfer() {
+
+    pendingTransfer = null;
+
+    document.getElementById("transferConfirmation").classList.add("hidden");
+
+}
+
+/* =========================
+   6. RECEIPTS
+========================= */
+
+function renderReceipt(transaction) {
+
+    const details = document.getElementById("receiptDetails");
+
+    details.innerHTML = `
+        <div class="receipt-row">
+            <span>Transaction ID</span>
+            <strong>${escapeHTML(transaction.id)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Reference Number</span>
+            <strong>${escapeHTML(transaction.reference)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Sender</span>
+            <strong>${escapeHTML(transaction.senderName)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Sender Account</span>
+            <strong>${escapeHTML(transaction.sender)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Receiver</span>
+            <strong>${escapeHTML(transaction.receiverName)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Receiver Account</span>
+            <strong>${escapeHTML(transaction.receiver)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Amount</span>
+            <strong>$${transaction.amount.toFixed(2)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Date</span>
+            <strong>${escapeHTML(transaction.date)}</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Status</span>
+            <strong class="success">Successful</strong>
+        </div>
+    `;
+
+}
+
+function renderLatestReceipt() {
+
+    const transaction = [...transactions].reverse().find(
+        item => item.sender === currentUser.email ||
+                item.receiver === currentUser.email
+    );
+
+    if (transaction) renderReceipt(transaction);
+
+}
+
+function shareReceipt() {
+
+    const text = document.getElementById("receiptContent").innerText;
+
+    if (navigator.share) {
+        navigator.share({
+            title: "NOVA BANK Receipt",
+            text: text
+        });
+    } else {
+        navigator.clipboard.writeText(text)
+            .then(() => alert("Receipt copied."));
+    }
+
+}
+
+/* =========================
+   7. DEPOSITS
+========================= */
+
+function submitDeposit() {
+
+    const amount = Number(document.getElementById("depositAmount").value);
+
+    const method = document.getElementById("depositMethod").value;
+
+    const file = document.getElementById("depositProof").files[0];
+
+    if (!amount || amount <= 0 || !method) {
+        alert("Enter the amount and payment method.");
+        return;
+    }
+
+    const request = {
+        reference: "DEP-" + Date.now(),
+        amount,
+        method,
+        status: "Pending",
+        date: new Date().toLocaleString(),
+        email: currentUser.email,
+        filename: file ? file.name : "No file attached"
+    };
+
+    deposits.push(request);
+
+    document.getElementById("depositAmount").value = "";
+
+    document.getElementById("depositProof").value = "";
+
+    renderDeposits();
+
+    alert("Deposit request submitted. No funds have been credited to this account.");
+
+}
+
+function renderDeposits() {
+
+    const container = document.getElementById("depositHistory");
+
+    const ownDeposits = deposits.filter(
+        item => item.email === currentUser.email
+    );
+
+    container.innerHTML = ownDeposits.length
+        ? ownDeposits.map(item => `
+            <div class="transaction">
+                <div>
+                    <strong>${escapeHTML(item.reference)}</strong>
+                    <p class="muted">${escapeHTML(item.date)}</p>
+                </div>
+                <div>
+                    $${item.amount.toFixed(2)}
+                    <p class="warning">${item.status}</p>
+                </div>
+            </div>
+        `).join("")
+        : "<p class='muted'>No deposit requests.</p>";
+
+}
+
+/* =========================
+   8. WITHDRAWALS
+========================= */
+
+function submitWithdrawal() {
+
+    const amount = Number(document.getElementById("withdrawAmount").value);
+
+    const method = document.getElementById("withdrawMethod").value;
+
+    const details = document.getElementById("withdrawDetails").value;
+
+    const photo = document.getElementById("withdrawPhoto").files[0];
+
+    if (!amount || amount <= 0 || !method || !details || !photo) {
+        alert("Complete the withdrawal form and upload the required photo.");
+        return;
+    }
+
+    const request = {
+        reference: "WDR-" + Date.now(),
+        amount,
+        method,
+        details,
+        filename: photo.name,
+        status: "Pending review",
+        submittedAt: Date.now(),
+        email: currentUser.email
+    };
+
+    withdrawals.push(request);
+
+    renderWithdrawals();
+
+    document.getElementById("withdrawAmount").value = "";
+    document.getElementById("withdrawDetails").value = "";
+    document.getElementById("withdrawPhoto").value = "";
+
+    alert("Withdrawal request submitted for review.");
+
+}
+
+function renderWithdrawals() {
+
+    const ownRequests = withdrawals.filter(
+        item => item.email === currentUser.email
+    );
+
+    const content = ownRequests.map(item => {
+
+        const remaining = Math.max(
+            0,
+            5 * 60 * 60 * 1000 - (Date.now() - item.submittedAt)
+        );
+
+        const hours = Math.floor(remaining / 3600000);
+
+        const minutes = Math.floor((remaining % 3600000) / 60000);
+
+        return `
+            <div class="transaction">
+                <div>
+                    <strong>${escapeHTML(item.reference)}</strong>
+                    <p class="muted">${escapeHTML(item.filename)}</p>
+                    <p class="warning">${escapeHTML(item.status)}</p>
+                    <p class="muted">
+                        Review time remaining: ${hours}h ${minutes}m
+                    </p>
+                </div>
+                <strong>$${item.amount.toFixed(2)}</strong>
+            </div>
+        `;
+
+    }).join("");
+
+    document.getElementById("withdrawHistory").innerHTML =
+        content || "<p class='muted'>No withdrawal history.</p>";
+
+    document.getElementById("withdrawStatus").innerHTML =
+        content || "<p class='muted'>No pending requests.</p>";
+
+}
+
+/* =========================
+   9. TRANSACTION HISTORY
+========================= */
+
+function getOwnTransactions() {
+
+    return transactions.filter(
+        item => item.sender === currentUser.email ||
+                item.receiver === currentUser.email
+    );
+
+}
+
+function renderHistory() {
+
+    const search = document.getElementById("historySearch").value.toLowerCase();
+
+    const date = document.getElementById("historyDate").value;
+
+    const list = getOwnTransactions().filter(item => {
+
+        const matchesSearch =
+            item.reference.toLowerCase().includes(search) ||
+            item.id.toLowerCase().includes(search);
+
+        const matchesDate = !date ||
+            new Date(item.date).toLocaleDateString() ===
+            new Date(date + "T00:00:00").toLocaleDateString();
+
+        return matchesSearch && matchesDate;
+
+    });
+
+    document.getElementById("historyTable").innerHTML =
+        list.map(item => `
+            <tr>
+                <td>${escapeHTML(item.reference)}</td>
+                <td>${item.sender === currentUser.email ? "Sent" : "Received"}</td>
+                <td>$${item.amount.toFixed(2)}</td>
+                <td>${escapeHTML(item.date)}</td>
+                <td class="success">${item.status}</td>
+                <td>
+                    <button class="btn"
+                    onclick="viewReceipt('${item.id}')">
+                        View
+                    </button>
+                </td>
+            </tr>
+        `).join("");
+
+}
+
+function viewReceipt(id) {
+
+    const transaction = transactions.find(item => item.id === id);
+
+    if (!transaction) return;
+
+    renderReceipt(transaction);
+
+    showPage("receipts");
+
+}
+
+function renderRecentTransactions() {
+
+    const list = getOwnTransactions().slice(-5).reverse();
+
+    document.getElementById("recentTransactions").innerHTML =
+        list.length
+        ? list.map(item => `
+            <div class="transaction">
+                <div>
+                    <strong>${item.sender === currentUser.email ? "Money Sent" : "Money Received"}</strong>
+                    <p class="muted">${escapeHTML(item.date)}</p>
+                </div>
+                <strong>$${item.amount.toFixed(2)}</strong>
+            </div>
+        `).join("")
+        : "<p class='muted'>No transactions available.</p>";
+
+}
+
+function downloadStatement() {
+
+    const rows = [
+        ["Reference", "Type", "Amount", "Date", "Status"],
+        ...getOwnTransactions().map(item => [
+            item.reference,
+            item.sender === currentUser.email ? "Sent" : "Received",
+            item.amount,
+            item.date,
+            item.status
+        ])
+    ];
+
+    const csv = rows.map(row =>
+        row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(",")
+    ).join("\n");
+
+    const blob = new Blob([csv], {type: "text/csv"});
+
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "nova-account-statement.csv";
+    link.click();
+
+    URL.revokeObjectURL(url);
+
+}
+
+/* =========================
+   10. CARD MANAGEMENT
+========================= */
+
+function freezeCard() {
+
+    cardFrozen = true;
+
+    updateCardStatus();
+
+}
+
+function unfreezeCard() {
+
+    cardFrozen = false;
+
+    updateCardStatus();
+
+}
+
+function replaceCard() {
+
+    if (confirm("Submit a card replacement request?")) {
+        alert("Card replacement request submitted.");
+    }
+
+}
+
+function updateCardStatus() {
+
+    const status = document.getElementById("cardStatus");
+
+    status.textContent = cardFrozen ? "Frozen" : "Active";
+
+}
+
+/* =========================
+   11. NOTIFICATIONS
+========================= */
+
+function renderNotifications() {
+
+    const own = notifications.filter(
+        item => item.recipient === currentUser.email
+    );
+
+    document.getElementById("notificationList").innerHTML =
+        own.length
+        ? own.map((item, index) => `
+            <div class="notification">
+                ${escapeHTML(item.message)}
+                <p class="muted">${item.read ? "Read" : "Unread"}</p>
+            </div>
+        `).join("")
+        : "<p class='muted'>No new notifications.</p>";
+
+}
+
+function markNotificationsRead() {
+
+    notifications.forEach(item => {
+        if (item.recipient === currentUser.email) {
+            item.read = true;
+        }
+    });
+
+    renderNotifications();
+
+}
+
+function clearNotifications() {
+
+    notifications = notifications.filter(
+        item => item.recipient !== currentUser.email
+    );
+
+    renderNotifications();
+
+}
+
+/* =========================
+   12. USER PROFILE
+========================= */
+
+function saveProfile() {
+
+    const name = document.getElementById("profileName").value.trim();
+
+    if (!name) {
+        alert("Enter your full name.");
+        return;
+    }
+
+    currentUser.name = name;
+
+    updateDashboard();
+
+    alert("Profile updated.");
+
+}
+
+function changePicture() {
+
+    const file = document.getElementById("profilePicture").files[0];
+
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+        alert("Select an image file.");
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function() {
+
+        currentUser.profilePicture = reader.result;
+
+        document.getElementById("profileAvatar").innerHTML =
+            `<img src="${reader.result}" alt="Profile picture">`;
+
+    };
+
+    reader.readAsDataURL(file);
+
+}
+
+/* =========================
+   13. ACCOUNT SETTINGS
+========================= */
+
+function setTheme(theme) {
+
+    document.body.classList.toggle("dark", theme === "dark");
+
+}
+
+function deleteAccount() {
+
+    if (!confirm("Are you sure you want to request account deletion?")) {
+        return;
+    }
+
+    alert("Account deletion requires secure server-side processing.");
+
+}
+
+function requestClosure() {
+
+    alert("Account closure request requires account verification.");
+
+}
+
+/* =========================
+   14. SAVINGS
+========================= */
+
+function createGoal() {
+
+    const name = document.getElementById("goalName").value.trim();
+
+    const amount = Number(document.getElementById("goalAmount").value);
+
+    if (!name || amount <= 0) {
+        alert("Enter a savings goal and target amount.");
+        return;
+    }
+
+    savingsGoals.push({
+        name,
+        amount,
+        saved: 0
+    });
+
+    renderSavings();
+
+}
+
+function renderSavings() {
+
+    document.getElementById("savingsGoals").innerHTML =
+        savingsGoals.map(goal => {
+
+            const percentage = Math.min(
+                100,
+                goal.saved / goal.amount * 100
+            );
+
+            return `
+                <div class="card">
+                    <strong>${escapeHTML(goal.name)}</strong>
+                    <p>Target: $${goal.amount.toFixed(2)}</p>
+                    <p>Saved: $${goal.saved.toFixed(2)}</p>
+
+                    <div class="progress">
+                        <div class="progress-bar"
+                        style="width:${percentage}%"></div>
+                    </div>
+
+                    <p>${percentage.toFixed(0)}% completed</p>
+                </div>
+            `;
+
+        }).join("") || "<p class='muted'>No savings goals created.</p>";
+
+}
+
+function calculateSavings() {
+
+    const monthly = Number(document.getElementById("monthlySaving").value);
+
+    const months = Number(document.getElementById("savingMonths").value);
+
+    if (monthly <= 0 || months <= 0) {
+        alert("Enter valid amounts.");
+        return;
+    }
+
+    const total = monthly * months;
+
+    document.getElementById("savingResult").textContent =
+        "Estimated savings: $" + total.toFixed(2);
+
+}
+
+/* =========================
+   15. CUSTOMER SUPPORT
+========================= */
+
+function submitSupport() {
+
+    const subject = document.getElementById("supportSubject").value.trim();
+
+    const message = document.getElementById("supportMessage").value.trim();
+
+    if (!subject || !message) {
+        alert("Complete the support form.");
+        return;
+    }
+
+    supportTickets.push({
+        subject,
+        message,
+        date: new Date().toLocaleString()
+    });
+
+    document.getElementById("supportHistory").innerHTML =
+        supportTickets.map(ticket => `
+            <div class="notification">
+                <strong>${escapeHTML(ticket.subject)}</strong>
+                <p>${escapeHTML(ticket.message)}</p>
+                <small>${escapeHTML(ticket.date)}</small>
+            </div>
+        `).join("");
+
+    document.getElementById("supportSubject").value = "";
+    document.getElementById("supportMessage").value = "";
+
+    alert("Support request submitted.");
+
+}
+
+/* =========================
+   16. ADMINISTRATION
+========================= */
+
+function adminLogin() {
+
+    alert(
+        "Administrator authentication must be connected to a secure server."
+    );
+
+}
+
+function sendAdminNotification() {
+
+    alert("Administrator permissions are required.");
+
+}
+
+/* =========================
+   17. SYSTEM UTILITIES
+========================= */
+
+function escapeHTML(value) {
+
+    return String(value).replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+    })[character]);
+
+}
+
+/* =========================
+   18. INITIALIZATION
+========================= */
+
+function initializeApp() {
+
+    showLogin();
+
+}
+
+initializeApp();
+
 </script>
-</body></html>
+
+</body>
+</html>
